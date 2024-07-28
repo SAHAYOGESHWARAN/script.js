@@ -1,6 +1,6 @@
-function abc()
+function myname()
 {
-    console.log("Hello")
+    console.log("saha")
 }
 
-abc()
+myname()
