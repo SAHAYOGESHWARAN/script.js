@@ -1,4 +1,4 @@
-var cookies = true
+var cookies = false
 if(cookies)
 {
     console.log("would like cookies");
@@ -9,4 +9,4 @@ else
 }
 
 
-//would like cookies
+//time to make more cookies
