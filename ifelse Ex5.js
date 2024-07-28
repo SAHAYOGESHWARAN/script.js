@@ -1,4 +1,4 @@
-var birthday =true
+var birthday =false
 if(birthday)
 {
     console.log("Happy Birthday");
@@ -6,4 +6,4 @@ if(birthday)
 else{
     console.log("No Birthday");
 }
-///Happy Birthday
+///No Birthday
