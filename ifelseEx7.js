@@ -1,4 +1,4 @@
-var seasons = "summer"
+var seasons = "autumn"
 
 if(seasons =="spring" )
 {
@@ -17,4 +17,4 @@ if(seasons =="winter")
     console.log("Bundle up and stay warm")
 }
 
-//have fun in the sun
+//Admire the colourful leaves
