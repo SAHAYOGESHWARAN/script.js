@@ -1,4 +1,4 @@
-var rain = true
+var rain = false
 
 if(rain)
 {
@@ -8,4 +8,4 @@ else{
     console.log("no need to take umbrella")
 }
 
-/// take on umberella
+/// no need to take umbrella
