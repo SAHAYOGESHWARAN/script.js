@@ -1,4 +1,4 @@
-var color ="yellow"
+var color ="green"
 
 if(color == "red")
 {
@@ -15,4 +15,5 @@ if(color =="green")
 
 
 
-// get ready
+
+// Go
