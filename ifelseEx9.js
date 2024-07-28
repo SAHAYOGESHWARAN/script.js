@@ -1,4 +1,4 @@
-var number = 4; 
+var number = 5; 
 if (number % 2 === 0) {
     console.log("the number is even");
 } else {
