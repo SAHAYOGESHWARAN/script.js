@@ -1,5 +1,8 @@
 function area(length,breadth)
 {
-    console.log( length*breadth);
+    var a=length*breadth
+    console.log( "Area is:"+a);
 }
-area(100,200)
+var length=10
+var breadth=20
+area(10,20)
