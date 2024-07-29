@@ -16,6 +16,9 @@
     var h1 = document.getElementById("result");
     
     function update() {
-        h1.textContent = "hello";
+        //create new element
+        var listitem =document.createElement("h1")
+        listitem.textContent="Hello saha"
+        h1.append(listitem);
     }
 </script>
