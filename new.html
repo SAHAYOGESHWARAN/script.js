@@ -6,13 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-<h1 id="h1">Hello World</h1>
-    <button>Change</button>
+    <h1 id="h1">Hello World</h1>
+    <button onclick="change()">Change</button>
 </body>
 </html>
 <script>
     // Selecting h1 tag
     var h1 = document.getElementById("h1");
     console.log(h1.textContent);
-    h1.textContent = "bye world";
+
+    // Function to change the text content
+    function change() {
+        h1.textContent = "Bye World";
+    }
 </script>
