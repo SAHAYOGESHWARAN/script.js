@@ -6,18 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <Name id="result">Name</h1>
-        <br>
-        <button>saha</button><br>
-        <button>gokul</button><br>
-        <button>stepan</button>
+    <h1 id="result">Name</h1>
+    <br>
+    <button onclick="update(event)">saha</button>
+    <button onclick="update(event)">gokul</button>
+    <button onclick="update(event)">stepan</button>
 </body>
 </html>
 <script>
-    //select h1
+    // Select h1
     var h1 = document.getElementById("result");
-    function update()
-    {
-        h1.textContent="saha"
+    
+    function update(event) {
+        h1.textContent = event.target.textContent;
     }
 </script>
+
+
+
+
+
