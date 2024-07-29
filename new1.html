@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <input id ="num1">
-    <input id ="num2">
+    <input id ="num1" value ="3">
+    <input id ="num2" value ="9">
     <button>Add</button>
     <p id="result">Result</p>
 </body>
@@ -17,6 +17,15 @@
   //selecting input box 2
   var box1=document.getElementById("num1")
   var box2=document.getElementById("num2")
-  //selecting ressult
+  //selecting result
 var result = document.getElementById("result")
+var box1value=Number(box1.value)
+var box2value=Number(box2.value)
+
+var total = box1value+box2value
+console.log(total)
 </script>
+
+
+
+
