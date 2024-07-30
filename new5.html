@@ -58,5 +58,174 @@
 </body>
 </html>
 <style>
-    
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#food-list div {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#food-list button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#food-list button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.order-delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-delete-btn:hover {
+    background-color: #e53935;
+}
+
 </style>
+
+<script>
+    let foodItems = [];
+
+function addFood() {
+    const foodName = document.getElementById('food-name').value;
+    const foodPrice = document.getElementById('food-price').value;
+
+    const foodItem = {
+        name: foodName,
+        price: foodPrice
+    };
+
+    foodItems.push(foodItem);
+    displayFoodItems();
+    document.getElementById('admin-form').reset();
+}
+
+function displayFoodItems() {
+    const foodList = document.getElementById('food-list');
+    foodList.innerHTML = '';
+
+    foodItems.forEach((item, index) => {
+        const foodDiv = document.createElement('div');
+        foodDiv.innerHTML = `
+            <span>${item.name} - $${item.price}</span>
+            <button onclick="orderFood(${index})">Order</button>
+        `;
+        foodList.appendChild(foodDiv);
+    });
+}
+
+function orderFood(index) {
+    const table = document.getElementById('order-table').getElementsByTagName('tbody')[0];
+    const newRow = table.insertRow();
+
+    const nameCell = newRow.insertCell(0);
+    const priceCell = newRow.insertCell(1);
+    const actionCell = newRow.insertCell(2);
+
+    nameCell.textContent = foodItems[index].name;
+    priceCell.textContent = foodItems[index].price;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'order-delete-btn';
+    deleteButton.onclick = function() {
+        table.deleteRow(newRow.rowIndex - 1);
+    };
+    actionCell.appendChild(deleteButton);
+}
+
+</script>
