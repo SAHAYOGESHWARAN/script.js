@@ -51,10 +51,51 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Rows will be added dynamically here -->
+           
         </tbody>
     </table>
 
-    <script src="script.js"></script>
+    <script >
+        function saveStudent() {
+    // Get the form values
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const course = document.getElementById('course').value;
+    const email = document.getElementById('email').value;
+
+    // Create a new row
+    const table = document.getElementById('student-table').getElementsByTagName('tbody')[0];
+    const newRow = table.insertRow();
+
+    // Insert cells in the row
+    const nameCell = newRow.insertCell(0);
+    const ageCell = newRow.insertCell(1);
+    const courseCell = newRow.insertCell(2);
+    const genderCell = newRow.insertCell(3);
+    const emailCell = newRow.insertCell(4);
+    const actionCell = newRow.insertCell(5);
+
+    // Fill the cells with the form data
+    nameCell.textContent = name;
+    ageCell.textContent = age;
+    courseCell.textContent = course;
+    genderCell.textContent = gender;
+    emailCell.textContent = email;
+
+    // Create and append the delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-btn';
+    deleteButton.onclick = function() {
+        table.deleteRow(newRow.rowIndex - 1);
+    };
+    actionCell.appendChild(deleteButton);
+
+    // Clear the form
+    document.getElementById('student-form').reset();
+}
+
+    </script>
 </body>
 </html>
