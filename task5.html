@@ -4,26 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        h1:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <h1  onclick="deleteitem(event)" >one</h1>
-    <h1  onclick="deleteitem(event)" >two</h1>
-    <h1  onclick="deleteitem(event)" >three</h1>
-    <h1  onclick="deleteitem(event)" >four</h1>
-    <h1  onclick="deleteitem(event)" >five</h1>
-    <h1  onclick="deleteitem(event)" >six</h1>
-    <h1  onclick="deleteitem(event)" >seven</h1>
-    <h1  onclick="deleteitem(event)" >eight</h1>
-    <h1  onclick="deleteitem(event)" >nine</h1>
-    <h1  onclick="deleteitem(event)" >ten</h1>
-    
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem(event) {
+            event.target.remove();
+        }
+    </script>
 </body>
 </html>
-<script>
-    
-    function deleteitem()
-    {
-      event.target.remove()
-
-    }
-</script>
