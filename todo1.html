@@ -4,29 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        #list-container {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 300px;
+        }
+
+        li {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+        }
+
+        li button {
+            background-color: #f44336;
+        }
+
+        li button:hover {
+            background-color: #e53935;
+        }
+    </style>
 </head>
 <body>
     <input id="input">
-    <button onclick="add()">add</button>
+    <button onclick="add()">Add</button>
     <ul id="list-container">
         <li>Hello
-            <button onclick="deleteitem(event)">delete</button>
+            <button onclick="deleteitem(event)">Delete</button>
         </li>
     </ul>
+    <script>
+        var ul = document.getElementById("list-container");
+        var input = document.getElementById("input");
+
+        function add() {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = input.value + "<button onclick='deleteitem(event)'>Delete</button>";
+            ul.appendChild(listItem);
+            input.value = '';  // Clear the input field after adding the item
+        }
+
+        function deleteitem(event) {
+            var item = event.target.parentElement;
+            ul.removeChild(item);
+        }
+    </script>
 </body>
 </html>
-<script>
-    // Selecting ul
-    var ul = document.getElementById("list-container");
-    var input = document.getElementById("input")
-    function add() {
-        var listItem = document.createElement("li");
-        listItem.innerHTML = input.value+"<button>delete</button>"
-        ul.appendChild(listItem);
-    }
-    function deleteitem()
-    {
-        var item = event.target.parentElement.remove
-        ()
-    }
-</script>
