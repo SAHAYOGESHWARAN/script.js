@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Form</title>
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="form-container">
@@ -30,8 +30,6 @@
                 <option value="JavaScript">JavaScript</option>
                 <option value="Java">Java</option>
                 <option value="C++">C++</option>
-                <option value="html">C++</option>
-                <option value="mongodb">C++</option>
             </select>
 
             <label for="email">E-mail</label>
@@ -94,16 +92,20 @@
             };
             actionCell.appendChild(deleteButton);
 
+            // Display an alert message
+            alert("Student details saved successfully!");
+
             // Clear the form
             document.getElementById('student-form').reset();
         }
     </script>
 </body>
 </html>
+
 <style>
     body {
     font-family: Arial, sans-serif;
-    background-color: #acb6f8;
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +113,7 @@
 }
 
 .form-container {
-    background: rgb(244, 169, 239);
+    background: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
