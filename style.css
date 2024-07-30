@@ -1,0 +1,118 @@
+/* General Styles */
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.login-container button:hover {
+    background-color: #005bb5;
+}
+
+.login-container a {
+    color: #0072ff;
+}
+
+/* Profile Page Styles */
+
+.profile {
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.profile-info button {
+    padding: 10px 20px;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-info button:hover {
+    background-color: #005bb5;
+}
+
+.profile-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Explore Page Styles */
+
+.explore {
+    text-align: center;
+}
+
+.explore-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.explore .post {
+    width: 300px;
+    height: auto;
+}
+
+.explore .post img {
+    width: 100%;
+    height: auto;
+}
