@@ -21,7 +21,7 @@
     var input = document.getElementById("input")
     function add() {
         var listItem = document.createElement("li");
-        listItem.textContent = input.value
+        listItem.innerHTML = input.value+"<button>delete</button>"
         ul.appendChild(listItem);
     }
     function deleteitem()
