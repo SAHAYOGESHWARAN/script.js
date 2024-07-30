@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input>
+    <inputn id="input">
     <button onclick="add()">add</button>
     <ul id="list-container">
         <li>Hello
@@ -18,9 +18,10 @@
 <script>
     // Selecting ul
     var ul = document.getElementById("list-container");
+    var input = document.getElementById("input")
     function add() {
         var listItem = document.createElement("li");
-        listItem.textContent = "hello";
+        listItem.textContent = input.value
         ul.appendChild(listItem);
     }
 </script>
