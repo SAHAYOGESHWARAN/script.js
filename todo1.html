@@ -10,7 +10,7 @@
     <button onclick="add()">add</button>
     <ul id="list-container">
         <li>Hello
-            <button>delete</button>
+            <button onclick="deleteitem(event)">delete</button>
         </li>
     </ul>
 </body>
@@ -23,5 +23,9 @@
         var listItem = document.createElement("li");
         listItem.textContent = input.value
         ul.appendChild(listItem);
+    }
+    function deleteitem()
+    {
+        var item = event.target.parentNode;
     }
 </script>
